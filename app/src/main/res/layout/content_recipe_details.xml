@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ingContainer"
+    android:background="#ff0000"
+    android:layout_margin="@dimen/layout_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

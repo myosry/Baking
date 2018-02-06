@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yosri.mustafa.eng.bakingapp.Ui.StepDetailsFragment">
+    <!--tools:showIn="@layout/activity_step_details">-->
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cardview_light_background"
+            android:orientation="vertical"
+            tools:context="com.yosri.mustafa.eng.bakingapp.Ui.StepDetailsFragment">
+            <!-- TODO: Update blank fragment layout -->
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/thumbnail"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/food"
+                android:layout_gravity="center"
+                />
+            <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                android:visibility="visible"
+                android:id="@+id/playerView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop=".25dp"
+                app:resize_mode="fill" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cardview_light_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/short_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:background="@color/cardview_light_background"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:padding="15dp"
+                    android:text="step"
+                    android:textAllCaps="true"
+                    android:textColor="@color/primary"
+                    android:textStyle="normal" />
+
+                <View
+                    android:background="@color/primary_dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <TextView
+                    android:id="@+id/desc"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_margin="20dp"
+                    android:fontFamily="serif"
+                    android:background="@color/cardview_light_background"
+                    android:paddingBottom="15dp"
+                    android:text="step"
+                    android:textColor="@color/primary_text"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/nested"
+                android:background="@color/primary"
+                tools:ignore="ObsoleteLayoutParam">
+
+                <Button
+                    android:id="@+id/lastpage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="back"
+                    android:drawableLeft="@drawable/stepper_left"
+                    android:drawableStart="@drawable/stepper_left"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="0dp"
+                    android:text="back"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="16sp"
+                    tools:targetApi="honeycomb" />
+
+                <Button
+                    android:id="@+id/nextpage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="next"
+                    android:drawableEnd="@drawable/stepper_right"
+                    android:drawableRight="@drawable/stepper_right"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
+                    android:text="next"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="16sp"
+                    tools:ignore="RelativeOverlap" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

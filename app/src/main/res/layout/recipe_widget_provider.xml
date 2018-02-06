@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/cardview_light_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- StackView to be shown on widget -->
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_margin="@dimen/item_margin"
+        android:id="@+id/stack_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:loopViews="true" />
+
+    <!-- Empty view is show if list items are empty -->
+    <ImageView
+        android:id="@+id/empty_view"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/food"
+        android:visibility="gone"
+        />
+    <!--</LinearLayout>-->
+</FrameLayout>
